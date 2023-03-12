@@ -9,7 +9,7 @@
 
 using System;
 
-class Ejercicio2
+class Ejercicio1
 {
     public static void Main()
     {
