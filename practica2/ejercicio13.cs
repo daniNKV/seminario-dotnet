@@ -24,23 +24,24 @@ class ejercicio12
     }
     static void ListarMeses()
     {
-        Meses meses = Enum.GetNames(typeof(Meses));
+        string[] meses = Enum.GetNames(typeof(Meses));
 
         for (int i=meses.Length; i > 0; i--) { 
-            Console.println(mes);
+            Console.WriteLine(meses[i]);
         }
     }
 
     static void CheckMes()
     {
-        Console.println("Ingrese un mes");
-        string mesBuscado = Console.readln();
+        Console.Write("Ingrese un mes");
+        string? mesBuscado = Console.ReadLine();
+        string[] meses = Enum.GetNames(typeof(Meses));
 
         foreach(string mes in meses){
             if(mesBuscado == mes ) {
-                Console.println("Encontrado");
+                Console.WriteLine("Encontrado");
             }else {
-                Console.println("No encontrado");
+                Console.WriteLine("No encontrado");
             }
         }
     }

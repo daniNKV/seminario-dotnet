@@ -11,8 +11,8 @@ class ejercicio8
     {
         string[] palabras = frase.Split(' ');
 
-        palabras.forEach(string palabra in palabras) {
-            Console.println(palabra);
+        foreach(string palabra in palabras) {
+            Console.Write(palabra);
         }
     }
 }

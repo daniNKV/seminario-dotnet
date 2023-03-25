@@ -15,7 +15,7 @@
 
 
 // Investigar sobre el tipo DateTime y usarlo para medir el tiempo de ejecución de los algoritmos
-// implementados en el ejercicio anterior
+// // implementados en el ejercicio anterior
 class ejercicio9
 {
     static void pruebaStrings()
@@ -27,7 +27,7 @@ class ejercicio9
         }
         DateTime finished = DateTime.Now;
 
-        Console.writeln(finished - init);
+        Console.Write(finished - init);
     }
     static void pruebaStringBuilders()
     {
@@ -40,7 +40,7 @@ class ejercicio9
 
         DateTime finished = DateTime.Now;
 
-        Console.writeln(finished - init);
+        Console.Write(finished - init);
 
 
     }

@@ -8,14 +8,14 @@ class Ejercicio8
     static void Saludos(string[] nombres) 
     {
         for(int i = 0; i < nombres.Length; i++ ){
-            Console.println("Hola " + nombre[i]);
+            Console.Write("Hola " + nombres[i]);
         }
     }
 
     static void Saludos2(string[] nombres)
     {
         foreach(string nombre in nombres){
-            Console.println("Hola " + nombre);
+            Console.Write("Hola " + nombre);
         }
     }
 }
