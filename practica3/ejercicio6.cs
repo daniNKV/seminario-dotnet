@@ -9,55 +9,49 @@
 
 class Ejercicio6
 {
-    static double? SumaMatrices(double[,] matriz1, double[,] matriz2)
+    static double[,]? SumaMatrices(double[,] matriz1, double[,] matriz2)
     {
         if (matriz1.GetLength(0) != matriz2.GetLength(0) && matriz1.GetLength(1) != matriz2.GetLength(1)) {
             return null;
         } else {
-            double[,] res = new double[,];
             for (int i = 0; i < matriz1.GetLength(0); i++) {
                 for (int j = 0; i < matriz1.GetLength(1); j++) {
-                    res[i,j] = matriz1[i,j] + matriz2[i,j];
+                    matriz1[i,j] = matriz1[i,j] + matriz2[i,j];
                 }
             }
 
-            return res;
+            return matriz1;
         }
     }
 
-    static double? RestaMatrices(double[,] matriz1, double[,] matriz2)
+    static double[,]? RestaMatrices(double[,] matriz1, double[,] matriz2)
     {
         if (matriz1.GetLength(0) != matriz2.GetLength(0) && matriz1.GetLength(1) != matriz2.GetLength(1)) {
             return null;
         } else {
-            double[,] res = new double[,];
             for (int i = 0; i < matriz1.GetLength(0); i++) {
                 for (int j = 0; i < matriz1.GetLength(1); j++) {
-                    res[i,j] = matriz1[i,j] - matriz2[i,j];
+                    matriz1[i,j] = matriz1[i,j] - matriz2[i,j];
                 }
             }
 
-            return res;
+            return matriz1;
         }
     }
 
-    static double MultiplicarMatrices(double[,] matriz1, double[,] matriz2)
+    static double[,]? MultiplicarMatrices(double[,] matriz1, double[,] matriz2)
     {
         try {
-            if (matriz1.GetLength(1) != matriz2.GetLength(1)) {
-                throw new ArgumentException();
-            } else {
-                double[,] res = new double[,];
-                for (int i = 0; i < matriz1.GetLength(0); i++) {
-                    for (int j = 0; i < matriz1.GetLength(1); j++) {
-                        res[i,j] = matriz1[i,j] * matriz2[i,j];
-                    }
+            for (int i = 0; i < matriz1.GetLength(0); i++) {
+                for (int j = 0; i < matriz1.GetLength(1); j++) {
+                    matriz1[i,j] = matriz1[i,j] * matriz2[i,j];
                 }
             }
-            
+                
+            return matriz1;
 
         } catch (ArgumentException e) {
-            Console.WriteLine(e.Message);
+            throw new ArgumentException();
         }
     }
     
