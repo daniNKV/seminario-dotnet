@@ -6,11 +6,15 @@ class Ejercicio5
 {
     static double[][] GetArregloDeArreglo(double [,] matriz)
     {
-        double[][] nuevoArreglo = new double[matriz.GetLength(0)][matriz.GetLength[1]];
+        double[][] nuevoArreglo = new double[matriz.GetLength(0)][];
+        
+        for (int i = 0; i < matriz.GetLength(0); i++) {
+            nuevoArreglo[i] = new double[matriz.GetLength(1)];
+        }
 
         for(int i = 0; i < matriz.GetLength(0); i++) {
             for (int j = 0; i < matriz.GetLength(1); i++) {
-                nuevoArreglo[i][j] = matriz[i][j];
+                nuevoArreglo[i][j] = matriz[i,j];
             }
         }
 
