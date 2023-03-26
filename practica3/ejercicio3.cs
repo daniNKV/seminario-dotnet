@@ -8,16 +8,16 @@
 
 class Ejercicio3
 {
-    static void Main(String[] args)
-    {
-        double[,] matriz = new double[,] 
-            {
-                {2.0, 1.0, 4.0},
-                {4.0, 5.0, 2.5},
-                {2.5, 4.6, 1.6}
-            };
-        ImprimirMatrizConFormato(matriz);
-    }
+    // static void Main(String[] args)
+    // {
+    //     double[,] matriz = new double[,] 
+    //         {
+    //             {2.0, 1.0, 4.0},
+    //             {4.0, 5.0, 2.5},
+    //             {2.5, 4.6, 1.6}
+    //         };
+    //     ImprimirMatrizConFormato(matriz);
+    // }
     static void ImprimirMatrizConFormato(double[,] matriz)
     {
         for (int i = 0; i < matriz.GetLength(0); i++) {
