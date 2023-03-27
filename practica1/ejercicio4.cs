@@ -4,14 +4,14 @@ saludo personalizado utilizando ese nombre o la frase “Hola mundo” si el usu
 línea en blanco. Para ingresar un string desde el teclado utilizar Console.ReadLine()
 */
 
-Console.WriteLine("Ingrese su nombre: ");
+// Console.WriteLine("Ingrese su nombre: ");
 
-// El caracter ? indica que la variable puede ser nula
-string? nombreUsuario = Console.ReadLine();
+// // El caracter ? indica que la variable puede ser nula
+// string? nombreUsuario = Console.ReadLine();
 
-if (nombreUsuario != "") {
-    Console.WriteLine(nombreUsuario);
-} else {
-    Console.WriteLine("Hola Mundo");
-}
+// if (nombreUsuario != "") {
+//     Console.WriteLine(nombreUsuario);
+// } else {
+//     Console.WriteLine("Hola Mundo");
+// }
 

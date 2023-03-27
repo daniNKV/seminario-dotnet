@@ -4,21 +4,21 @@ es divisible por 4 pero no por 100. Si es divisible por 100, para ser bisiesto d
 por 400
 */
 
-int x;
+// int x;
 
-Console.WriteLine("Ingrese un año: ");
-x = int.Parse(Console.ReadLine());
+// Console.WriteLine("Ingrese un año: ");
+// x = int.Parse(Console.ReadLine());
 
-bool bisiesto;
+// bool bisiesto;
 
-if (x % 4 == 0 && x % 100 != 0) {
-    bisiesto = true;
-} else {
-    if (x % 100 == 0 && x % 400 == 0) {
-        bisiesto = true;
-    }else {
-        bisiesto = false;
-    }
-}
+// if (x % 4 == 0 && x % 100 != 0) {
+//     bisiesto = true;
+// } else {
+//     if (x % 100 == 0 && x % 400 == 0) {
+//         bisiesto = true;
+//     }else {
+//         bisiesto = false;
+//     }
+// }
 
-Console.WriteLine(bisiesto);
+// Console.WriteLine(bisiesto);

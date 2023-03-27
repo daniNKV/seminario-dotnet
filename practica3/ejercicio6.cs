@@ -50,7 +50,7 @@ class Ejercicio6
                 
             return matriz1;
 
-        } catch (ArgumentException e) {
+        } catch (ArgumentException) {
             throw new ArgumentException();
         }
     }

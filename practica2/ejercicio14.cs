@@ -8,12 +8,12 @@ using System;
 
 class Ejercicio14
 {
-    public static void Main(string[] args)
-    {
-        int num = Int32.Parse(args[0]);
+    // public static void Main(string[] args)
+    // {
+    //     int num = Int32.Parse(args[0]);
 
-        ListarPrimos(num);
-    }
+    //     ListarPrimos(num);
+    // }
     static void ListarPrimos(int n)
     {
         for(int i = 1; i <= n; i++) {

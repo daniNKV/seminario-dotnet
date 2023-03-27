@@ -10,47 +10,47 @@ b)utilizando switch
 
 
 // a)
-Console.WriteLine("Ingrese su nombre: ");
+// Console.WriteLine("Ingrese su nombre: ");
 
-string? nombre = Console.ReadLine();
+// string? nombre = Console.ReadLine();
 
-if(nombre == "Juan") {
-    Console.WriteLine("Hola amigo!");
-}else {
-    if(nombre == "Maria") {
-        Console.WriteLine("Hola señora!");
-    }else {
-        if(nombre == "Alberto") {
-            Console.WriteLine("Hola Alberto!");
-        }else {
-            if(nombre == "") {
-                Console.WriteLine("Buen dia " + nombre);
-            } else {
-                Console.WriteLine("Buen dia mundo!");
-            }
-        }
-    }
-}
+// if(nombre == "Juan") {
+//     Console.WriteLine("Hola amigo!");
+// }else {
+//     if(nombre == "Maria") {
+//         Console.WriteLine("Hola señora!");
+//     }else {
+//         if(nombre == "Alberto") {
+//             Console.WriteLine("Hola Alberto!");
+//         }else {
+//             if(nombre == "") {
+//                 Console.WriteLine("Buen dia " + nombre);
+//             } else {
+//                 Console.WriteLine("Buen dia mundo!");
+//             }
+//         }
+//     }
+// }
 
-// b)
+// // b)
 
-Console.WriteLine("Ingrese su nombre: ");
-string? nombreB = Console.ReadLine();
+// Console.WriteLine("Ingrese su nombre: ");
+// string? nombreB = Console.ReadLine();
 
-switch (nombreB) {
-    case "Juan":
-        Console.WriteLine("Hola amigo!");
-        break;
-    case "Maria":
-        Console.WriteLine("Hola Señora");
-        break;
-    case "Alberto":
-        Console.WriteLine("Hola");
-        break;
-    case "":
-        Console.WriteLine("Buen dia mundo!");
-        break;
-    default: 
-        Console.WriteLine("Buen dia " + nombre);
-        break;
-}
+// switch (nombreB) {
+//     case "Juan":
+//         Console.WriteLine("Hola amigo!");
+//         break;
+//     case "Maria":
+//         Console.WriteLine("Hola Señora");
+//         break;
+//     case "Alberto":
+//         Console.WriteLine("Hola");
+//         break;
+//     case "":
+//         Console.WriteLine("Buen dia mundo!");
+//         break;
+//     default: 
+//         Console.WriteLine("Buen dia " + nombre);
+//         break;
+// }

@@ -6,14 +6,14 @@
 class Ejercicio15
 {
 
-    public static void Main(string[] args)
-    {
-        Console.Write(calcularFibonacci(10));
-    }
+    // public static void Main(string[] args)
+    // {
+    //     Console.Write(calcularFibonacci(10));
+    // }
     static int calcularFibonacci(int n)
     {
         int[] serie = new int[n];
-        
+
         if (n <= 2) {
             return 1;
         }

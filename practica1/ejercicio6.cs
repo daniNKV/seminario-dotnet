@@ -5,6 +5,6 @@ caracteres de la misma. El programa termina al ingresar la cadena vacía. (si st
 de tipo string, entonces st.Length devuelve la cantidad de caracteres del string).
 */
 
-Console.WriteLine("Ingrese una cadena de texto: ");
-string stringIngresado = Console.ReadLine();
-Console.WriteLine(stringIngresado.Length);
+// Console.WriteLine("Ingrese una cadena de texto: ");
+// string stringIngresado = Console.ReadLine();
+// Console.WriteLine(stringIngresado.Length);

@@ -10,7 +10,9 @@ class Ejercicio16
     public static void Main(string[] args)
     {
         // Console.Write(CalcularFactorialA(Int32.Parse(args[0])));
-        Console.Write(CalcularFactorialB(4));
+        // Console.Write(CalcularFactorialB(4));
+
+
     }
     static int CalcularFactorialA(int n) {
         int acc = 1;

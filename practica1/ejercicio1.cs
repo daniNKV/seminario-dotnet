@@ -7,14 +7,14 @@
 // \ Escape de carácteres no reconocidos o inicio de expresion regular con \{
 // \\ Escapa al carácter \
 
-using System;
+// using System;
 
-class Ejercicio1
-{
-    public static void Main()
-    {
-        Console.WriteLine("Esta linea se corta con \n un escape");
-        Console.WriteLine("Esta linea tiene un caracter \t de tabulación");
-        Console.WriteLine("Esta linea acepta caracteres \\n no reconocidos");
-    }
-}
+// class Ejercicio1
+// {
+//     public static void Main()
+//     {
+//         Console.WriteLine("Esta linea se corta con \n un escape");
+//         Console.WriteLine("Esta linea tiene un caracter \t de tabulación");
+//         Console.WriteLine("Esta linea acepta caracteres \\n no reconocidos");
+//     }
+// }
