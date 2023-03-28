@@ -8,10 +8,10 @@
 
 class Ejercicio13
 {
-    static void Main(string[] args) 
-    {
-        Console.WriteLine(VerificarBalanceoParentesis("((3 + 1) * 3"));
-    }
+    // static void Main(string[] args) 
+    // {
+    //     Console.WriteLine(VerificarBalanceoParentesis("((3 + 1) * 3"));
+    // }
     static bool VerificarBalanceoParentesis(string str)
     {
         bool res = true;
