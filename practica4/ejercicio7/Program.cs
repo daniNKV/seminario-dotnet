@@ -10,3 +10,19 @@
 // 6. GetValorMínimo(): devuelve el valor mínimo que contiene el árbol.
 // A modo de ejemplo, el siguiente código debe arrojar por consola la salida que se muestra.
 
+Nodo n = new Nodo(7);
+n.Insertar(8);
+n.Insertar(10);
+n.Insertar(3);
+n.Insertar(1);
+n.Insertar(5);
+n.Insertar(14);
+foreach (int i in n.GetInOrden())
+{
+Console.Write(i + " ");
+}
+Console.WriteLine();
+Console.WriteLine(n.GetAltura());
+Console.WriteLine(n.GetCantidadNodos());
+Console.WriteLine(n.GetValorMaximo());
+Console.WriteLine(n.GetValorMinimo());

@@ -11,30 +11,25 @@ class Nodo
         this.hijoIzquierdo = null;
     }
 
-    private void setValor(int valor) 
-    {
-        this.valor = valor;
-    }
-
     private int getValor()
     {
         return this.valor;
     }
-    public void InsertarValor(int valor)
+    public void Insertar(int valor)
     {
         if (valor < this.getValor()){
             if (this.hijoIzquierdo == null) {
                 this.hijoIzquierdo = new Nodo(valor);
 
             } else {
-                this.hijoIzquierdo.InsertarValor(valor);
+                this.hijoIzquierdo.Insertar(valor);
             }
 
         } else if (valor > this.getValor()){
             if (this.hijoDerecho == null) {
                 this.hijoDerecho = new Nodo(valor);
             } else {
-                this.hijoDerecho.InsertarValor(valor);
+                this.hijoDerecho.Insertar(valor);
             }
 
         } else 
@@ -42,7 +37,7 @@ class Nodo
     }
 
 
-    public List<int> GetInorden()
+    public List<int> GetInOrden()
     {
         List<int> arbol = new List<int>();
         
@@ -69,16 +64,63 @@ class Nodo
         return Altura(this);
     }
 
-    private int Altura(Nodo nodo)
+    private int Altura(Nodo? nodo)
     {
         if (nodo == null) {
             return 0;
-        }
+        } 
 
         int alturaIzquierda = Altura(nodo.hijoIzquierdo);
         int alturaDerecha = Altura(nodo.hijoDerecho);
 
         return 1 + Math.Max(alturaIzquierda, alturaDerecha);
+    
     }
+
+    public int GetCantidadNodos() 
+    {
+        return Nodos(this);
+    }
+
+    private int Nodos(Nodo? nodo) 
+    {
+        if (nodo == null) {
+            return 0;
+        }
+        int nodosIzquierda = Nodos(nodo.hijoIzquierdo);
+        int nodosDerecha = Nodos(nodo.hijoDerecho);
+        
+        return 1 + nodosIzquierda + nodosDerecha;
+    }
+
+    public int GetValorMaximo() {
+        return Maximo(this);
+    }
+    public int GetValorMinimo() {
+        return Minimo(this);
+    }
+
+    private int Minimo(Nodo? nodo){
+        if (nodo == null) {
+            return int.MaxValue;
+        }
+
+        int minimoIzquierda = Minimo(nodo.hijoIzquierdo);
+        int minimoDerecha = Minimo(nodo.hijoDerecho);
+
+        return minimoIzquierda < minimoDerecha ? minimoIzquierda : minimoDerecha;
+    }
+
+    private int Maximo(Nodo? nodo) {
+        if (nodo == null) {
+            return int.MinValue;
+        }
+
+        int maximoIzquierda = Maximo(nodo.hijoIzquierdo);
+        int maximoDerecha = Maximo(nodo.hijoDerecho);
+
+        return maximoIzquierda > maximoDerecha ? maximoIzquierda : maximoDerecha;
+    }
+
 
 }
