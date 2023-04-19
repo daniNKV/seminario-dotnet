@@ -27,43 +27,43 @@
 
 // ###################################
 
-List<Persona> LeerPersonas()
-{
-    List<Persona> personas = new List<Persona>();
-    Console.SetIn(new System.IO.StreamReader("entrada.txt"));
-    string? line = Console.ReadLine();
-    while (line != null) {
-        string[] campos = line.Split(",");
-        personas.Add(new Persona(campos[0], Int32.Parse(campos[1]), Int32.Parse(campos[2])));
-        line = Console.ReadLine();
-    }
+// List<Persona> LeerPersonas()
+// {
+//     List<Persona> personas = new List<Persona>();
+//     Console.SetIn(new System.IO.StreamReader("entrada.txt"));
+//     string? line = Console.ReadLine();
+//     while (line != null) {
+//         string[] campos = line.Split(",");
+//         personas.Add(new Persona(campos[0], Int32.Parse(campos[1]), Int32.Parse(campos[2])));
+//         line = Console.ReadLine();
+//     }
 
-    return personas;
-}
-
-
-Persona BuscarMenorPersona(List<Persona> personas)
-{
-    Persona menor;
-    Persona[] personasArr = personas.ToArray();
-    for (int i = 1; i < personasArr.GetLength(0) - 1; i++) {
-        if (personasArr[i].EsMayorQue(personasArr[i - 1])){
-            menor = personasArr[i - 1];
-        } else {
-            menor = personasArr[i];
-        }
-    } 
-
-    return menor;
-}
+//     return personas;
+// }
 
 
-void ImprimirListado(List<Persona> personas)
-{
-    Persona[] personasArr = personas.ToArray(); 
-    Console.WriteLine($"Nro) Nombre          Edad   Dni");
+// Persona BuscarMenorPersona(List<Persona> personas)
+// {
+//     Persona menor;
+//     Persona[] personasArr = personas.ToArray();
+//     for (int i = 1; i < personasArr.GetLength(0) - 1; i++) {
+//         if (personasArr[i].EsMayorQue(personasArr[i - 1])){
+//             menor = personasArr[i - 1];
+//         } else {
+//             menor = personasArr[i];
+//         }
+//     } 
 
-    for (int i = 0; i < personasArr.GetLength(0); i++) {
-        personasArr[i].Imprimir(i);
-    }
-}
+//     return menor;
+// }
+
+
+// void ImprimirListado(List<Persona> personas)
+// {
+//     Persona[] personasArr = personas.ToArray(); 
+//     Console.WriteLine($"Nro) Nombre          Edad   Dni");
+
+//     for (int i = 0; i < personasArr.GetLength(0); i++) {
+//         personasArr[i].Imprimir(i);
+//     }
+// }
