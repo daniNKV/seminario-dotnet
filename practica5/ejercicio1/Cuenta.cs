@@ -1,29 +1,35 @@
 class Cuenta 
 {
+    public static List<Cuenta> cuentas => cuentas;
     private static double depositos;
     private static double totalDepositos;
     private static double extracciones;
     private static double totalExtracciones;
+    private static int cantidadCuentas;
     private static int denegados;
-    private static int cuentas;
     private int _id;
     private double _saldo;
 
     static Cuenta()
     {
-        cuentas = 0;
+        cuentas = new List<Cuenta>();
         depositos = 0;
         extracciones = 0;
         totalDepositos = 0;
+        cantidadCuentas = 0;
         totalExtracciones = 0;
         denegados = 0;
+
     }
 
     public Cuenta() 
     {
         this._saldo = 0;
         this.cuentas += 1;
-        this._id = this.cuentas;
+        this._id = Cuenta.cantidadCuentas;
+        
+        cuentas.Add(this);
+        
         Console.WriteLine($"Se creó la cuenta ID = {this._id}");
     } 
 
@@ -66,7 +72,7 @@ class Cuenta
     static void ImprimirDetalle()
     {
         Console.WriteLine("DETALLE");
-        Console.WriteLine($"CUENTAS CREADAS: {this.cuentas}");
+        Console.WriteLine($"CUENTAS CREADAS: {this.numeroCuentas}");
         Console.WriteLine($"Depósitos: {this.cuentas} - Total depositado: {this.totalDepositos}");
         Console.WriteLine($"Extracciones: {this.extracciones} - Total extraido: {this.totalExtracciones}");
         Console.WriteLine($"Saldo {this.depositos - this.extracciones}");
