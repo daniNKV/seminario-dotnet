@@ -1,7 +1,7 @@
-namespace ejercicios1a6;
 
 class Libro : IAlquilable, IReciclable
 {
+    public Libro() {}
     public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando libro a persona");

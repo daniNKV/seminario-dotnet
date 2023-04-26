@@ -1,7 +1,7 @@
-namespace ejercicios1a6;
 
 class Perro : IAtendible, IVendible
 {
+    public Perro() {}
     public void SeAtiende()
     {
         Console.WriteLine("Atendiendo perro");
