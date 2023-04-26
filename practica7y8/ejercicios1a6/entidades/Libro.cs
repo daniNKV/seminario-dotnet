@@ -1,14 +1,19 @@
 namespace ejercicios1a6;
 
-class Libro : IAlquilable<Libros>, IReciclable<Libro>
+class Libro : IAlquilable, IReciclable
 {
-    void SeAlquilaA(Persona p)
+    public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando libro a persona");
     }
 
-    void SeRecicla()
+    public void SeRecicla()
     {
         Console.WriteLine("Reciclando libro");
+    }
+
+    public void Devuelve(Persona p)
+    {
+        Console.WriteLine("Libro devuelto por persona");
     }
 }

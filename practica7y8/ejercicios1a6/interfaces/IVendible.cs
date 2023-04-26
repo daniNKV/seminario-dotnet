@@ -1,6 +1,6 @@
 namespace ejercicios1a6;
 
-interface IVendible<T>
+interface IVendible
 {
-    void SeVende(T elemento);
+    public void SeVendeA(Persona p);
 }

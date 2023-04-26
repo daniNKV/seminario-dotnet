@@ -1,8 +1,8 @@
 namespace ejercicios1a6;
 
-class Persona : IAtendible<Persona>
+class Persona : IAtendible
 {
-    void SeAtiende()
+    public void SeAtiende()
     {
         Console.WriteLine("Atendiendo persona");
     }

@@ -1,6 +1,8 @@
 namespace ejercicios1a6;
 
-interface IAlquilable<T>
+interface IAlquilable
 {
-    void SeAlquilaA(T individuo);
+    void SeAlquilaA(Persona p);
+
+    void Devuelve(Persona p);
 }

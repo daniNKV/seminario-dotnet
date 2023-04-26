@@ -1,6 +1,6 @@
 namespace ejercicios1a6;
 
-interface ILavable<T>
+interface ILavable
 {
-    void SeLava(T elemento);
+    void SeLava();
 }

@@ -1,12 +1,12 @@
 namespace ejercicios1a6;
 
-class Auto : IVendible<Auto>, ILavable<Auto>
+class Auto : IVendible, ILavable
 {
-    void SeLava(Auto auto) {
+    public void SeLava() {
         Console.WriteLine("Lavando Auto");
     }
 
-    void SeVendeA(Personas p) {
+    public void SeVendeA(Persona p) {
         Console.WriteLine("Vendiendo auto a persona");
     }
 }

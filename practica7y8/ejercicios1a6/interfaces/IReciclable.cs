@@ -1,6 +1,6 @@
 namespace ejercicios1a6;
 
-interface IReciclable<T>
+interface IReciclable
 {
-    void SeRecicla(T elemento);
+    void SeRecicla();
 }

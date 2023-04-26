@@ -1,6 +1,6 @@
 namespace ejercicios1a6;
 
-interface IAtendible<T>
+interface IAtendible
 {
-    void SeAtiende(T sujeto);
+    void SeAtiende();
 }
