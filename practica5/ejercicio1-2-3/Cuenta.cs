@@ -1,6 +1,6 @@
 class Cuenta 
 {
-    public static List<Cuenta> cuentas => cuentas;
+    public static List<Cuenta> cuentas;
     private static double depositos;
     private static double totalDepositos;
     private static double extracciones;
@@ -25,7 +25,7 @@ class Cuenta
     public Cuenta() 
     {
         this._saldo = 0;
-        this.cuentas += 1;
+        Cuenta.cantidadCuentas += 1;
         this._id = Cuenta.cantidadCuentas;
         
         cuentas.Add(this);
@@ -33,13 +33,13 @@ class Cuenta
         Console.WriteLine($"Se creó la cuenta ID = {this._id}");
     } 
 
-    public void Extraer(double monto) 
+    public Cuenta Extraer(double monto) 
     {
         try {
             RetirarMonto(monto);
-        } catch (e) 
+        } catch (Exception e) 
         {
-            Console.WriteLine(e.message);
+            Console.WriteLine(e.Message);
             Cuenta.denegados++;
         }
 
@@ -49,12 +49,12 @@ class Cuenta
         return this;
     }
 
-    public void Depositar(double monto)
+    public Cuenta Depositar(double monto)
     {
         this._saldo += monto;
         Cuenta.depositos++;
-        Cuenta.depositosTotal += monto;
-        Console.WriteLine($"Se depositaron {monto} en la cuenta {this._id} ${(Saldo= this._saldo)}");
+        Cuenta.totalDepositos += monto;
+        Console.WriteLine($"Se depositaron {monto} en la cuenta {this._id} (Saldo= {(this._saldo)}");
         
         return this;
     }
@@ -69,14 +69,14 @@ class Cuenta
         this._saldo -= monto;
     }
 
-    static void ImprimirDetalle()
+    public static void ImprimirDetalle()
     {
         Console.WriteLine("DETALLE");
-        Console.WriteLine($"CUENTAS CREADAS: {this.numeroCuentas}");
-        Console.WriteLine($"Depósitos: {this.cuentas} - Total depositado: {this.totalDepositos}");
-        Console.WriteLine($"Extracciones: {this.extracciones} - Total extraido: {this.totalExtracciones}");
-        Console.WriteLine($"Saldo {this.depositos - this.extracciones}");
-        Console.WriteLine($"Se denegaron {this.denegados} extracciones por falta de fondos");
+        Console.WriteLine($"CUENTAS CREADAS: {Cuenta.cantidadCuentas}");
+        Console.WriteLine($"Depósitos: {Cuenta.depositos} - Total depositado: {Cuenta.totalDepositos}");
+        Console.WriteLine($"Extracciones: {Cuenta.extracciones} - Total extraido: {Cuenta.totalExtracciones}");
+        Console.WriteLine($"Saldo {Cuenta.totalDepositos - Cuenta.totalExtracciones}");
+        Console.WriteLine($"Se denegaron {Cuenta.denegados} extracciones por falta de fondos");
         
     }
 }
