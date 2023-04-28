@@ -44,3 +44,15 @@ foreach (INombrable n in vector)
 {
     Console.WriteLine($"{n.Nombre}: {n}");
 }
+var vector2 = new INombrable[]  {
+    new Persona() {Nombre="Ana María"},
+    new Perro() {Nombre="Sultán"},
+    new Persona() {Nombre="Ana"},
+    new Persona() {Nombre="José Carlos"},
+    new Perro() {Nombre="Chopper"}
+};
+Array.Sort(vector2, new ComparadorLongitudNombre());//ordena por longitud de Nombre
+foreach (INombrable n in vector2)
+{
+    Console.WriteLine($"{n.Nombre.Length}: {n.Nombre}");
+}
