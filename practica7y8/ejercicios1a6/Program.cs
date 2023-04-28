@@ -18,3 +18,16 @@ Procesador.Secar(auto);
 Procesador.Vender(auto, persona);
 Procesador.Vender(perro, persona);
 Procesador.Vender(peliculaClasica, persona);
+
+var lista = new List<object>() {
+    new Persona(),
+    new Auto()
+};
+foreach (IComercial c in lista) {
+    c.Importar();    
+}
+foreach (IImportante i in lista) {
+    i.Importar();
+}
+(lista[0] as Persona)?.Importar();
+(lista[1] as Auto)?.Importar();

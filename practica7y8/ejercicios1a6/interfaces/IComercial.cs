@@ -1,0 +1,4 @@
+interface IComercial 
+{
+    void Importar();
+}

@@ -1,5 +1,5 @@
 
-class Auto : IVendible, ILavable, IReciclable
+class Auto : IVendible, ILavable, IReciclable, IComercial, IImportante
 {
     public Auto() {}
     public void SeLava() {
@@ -16,6 +16,18 @@ class Auto : IVendible, ILavable, IReciclable
 
     public void SeSeca() {
         Console.WriteLine("Secando auto");
+    }
+
+    void IComercial.Importar(){
+        Console.WriteLine("Vendiendo auto al exterior");
+    }
+
+    void IImportante.Importar() {
+        Console.WriteLine("Auto importante");
+    }
+
+    public void Importar() {
+        Console.WriteLine("Método Importar() de la clase Auto ");
     }
 
 }

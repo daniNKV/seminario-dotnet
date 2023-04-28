@@ -1,0 +1,4 @@
+interface IImportante 
+{
+    void Importar();
+}

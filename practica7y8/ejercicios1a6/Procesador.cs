@@ -8,6 +8,8 @@ static class Procesador
     public static void Vender(IVendible x, Persona p) => x.SeVendeA(p);
     public static void Reciclar(IReciclable x) => x.SeRecicla();
     public static void Devolver(IAlquilable x, Persona p) => x.Devuelve(p);
+    public static void Importa(IComercial x) => x.Importar();
+    public static void Importa(IImportante x) => x.Importar();
 
 
 
