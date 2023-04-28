@@ -1,6 +1,7 @@
 
-class Perro : IAtendible, IVendible, ILavable
+class Perro : IAtendible, IVendible, ILavable, INombrable
 {
+    public string Nombre { get; set; }
     public Perro() {}
     public void SeAtiende()
     {
@@ -20,5 +21,23 @@ class Perro : IAtendible, IVendible, ILavable
     public void SeSeca()
     {
         Console.WriteLine("Secando perro");
+    }
+
+
+    public override string ToString() {
+        return this.Nombre + " es un perro";
+    }
+
+
+    public int CompareTo(object obj)
+    {
+        if (obj == null) return 1;
+        
+        INombrable otroNombre = obj as INombrable;
+        if (otroNombre != null)
+            return this.Nombre.CompareTo(otroNombre.Nombre);
+        else
+           throw new ArgumentException("Un elemento no es nombrable");
+    
     }
 }

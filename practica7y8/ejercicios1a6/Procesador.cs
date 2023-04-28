@@ -12,5 +12,4 @@ static class Procesador
     public static void Importa(IImportante x) => x.Importar();
 
 
-
 }
